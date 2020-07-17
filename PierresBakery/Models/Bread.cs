@@ -14,9 +14,12 @@ namespace PierresBakery.Models
       Quantity = quantity;
     }
 
-    public int GetTotal()
+    public int GetTotalBread()
     {
-      return Price * Quantity;
+      int Total = Price * Quantity;
+      int TotalQuantityFree = Quantity / 3;
+      int TotalBreadCost = (Total - TotalQuantityFree) * Price;
+      return TotalBreadCost;
     }
   }
 }
