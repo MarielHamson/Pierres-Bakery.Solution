@@ -13,9 +13,5 @@ namespace PierresBakery.Models
       Price = price;
       Quantity = quantity;
     }
-
-
-
-
   }
 }

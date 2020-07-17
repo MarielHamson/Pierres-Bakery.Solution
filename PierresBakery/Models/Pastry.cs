@@ -1,9 +1,17 @@
+using System;
+using System.Collections.Generic;
+
 namespace PierresBakery.Models
 {
   public class Pastry
   {
+    public int Price { get; }
+    public int Quantity { get; }
 
-    // properties, methods, etc. will go here.
-
+    public Pastry(int price, int quantity)
+    {
+      Price = price;
+      Quantity = quantity;
+    }
   }
 }
