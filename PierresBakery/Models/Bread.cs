@@ -5,12 +5,10 @@ namespace PierresBakery.Models
 {
   public class Bread
   {
-    // public int Price { get; }
     public int BreadQuantity { get; }
 
     public Bread(int breadQuantity)
     {
-      // Price = price;
       BreadQuantity = breadQuantity;
     }
 

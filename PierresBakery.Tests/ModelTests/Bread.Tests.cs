@@ -16,19 +16,9 @@ namespace PierresBakery.Tests
       Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
     }
 
-    // [TestMethod]
-    // public void GetPrice_ReturnsPrice_Int()
-    // {
-    //   int quantity = 5;
-    //   int price = 5;
-    //   Bread newBreadOrder = new Bread(price, quantity);
-    //   int result = newBreadOrder.Price;
-    //   Assert.AreEqual(price, result);}
-
     [TestMethod]
     public void GetQuantity_ReturnsQuantity_Int()
     {
-      // int price = 5;
       int breadQuantity = 5;
       Bread newBreadOrder = new Bread(breadQuantity);
       int result = newBreadOrder.BreadQuantity;

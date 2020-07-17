@@ -20,8 +20,42 @@ namespace PierresBakery
       int pastryQuantity = int.Parse(pastryResponse);
       Pastry newPastryOrder = new Pastry(pastryQuantity);
       int pastryTotal = newPastryOrder.GetTotalPastry(pastryQuantity);
-      Console.WriteLine("Your total is: " + (breadTotal + pastryTotal));
+      Console.WriteLine("Your total is: $" + (breadTotal + pastryTotal));
+      Console.WriteLine("Is your order correct? Press [Y] for Yes, [N] for No");
+      string completeOrder = Console.ReadLine();
+      if (completeOrder == "y" || completeOrder == "Y")
+      {
+        Console.WriteLine("Thanks, have a nice day!");
+        Main();
+      }
+      else
+      {
+        Console.WriteLine("Okay, which would you like to revise? Type [Bread Order] [Pastry Order] or [Nevermind] to go back to Start a New Order");
+        string reviseOrder = Console.ReadLine();
+        if (reviseOrder == "Bread Order" || reviseOrder == "bread order")
+        {
+          Console.WriteLine("No problem! How many loaves of bread would you like?");
+          breadResponse = Console.ReadLine();
+          breadQuantity = int.Parse(breadResponse);
+          breadTotal = newBreadOrder.GetTotalBread(breadQuantity);
+          Console.WriteLine("Your new total is: $" + (breadTotal + pastryTotal));
+          Main();
 
+        }
+        else if (reviseOrder == "Pastry Order" || reviseOrder == "pastry order")
+        {
+          Console.WriteLine("No problem! How many pastries would you like?");
+          pastryResponse = Console.ReadLine();
+          pastryQuantity = int.Parse(pastryResponse);
+          pastryTotal = newPastryOrder.GetTotalPastry(pastryQuantity);
+          Console.WriteLine("Your new total is: $" + (breadTotal + pastryTotal));
+          Main();
+        }
+        else
+        {
+          Main();
+        }
+      }
     }
   }
 }
