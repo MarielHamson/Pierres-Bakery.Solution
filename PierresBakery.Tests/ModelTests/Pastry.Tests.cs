@@ -19,7 +19,6 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void GetQuantity_ReturnsQuantity_Int()
     {
-      // int price = 5;
       int pastryQuantity = 5;
       Pastry newPastryOrder = new Pastry(pastryQuantity);
       int result = newPastryOrder.PastryQuantity;
