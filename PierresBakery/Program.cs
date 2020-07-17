@@ -14,10 +14,14 @@ namespace PierresBakery
       string breadResponse = Console.ReadLine();
       int breadQuantity = int.Parse(breadResponse);
       Bread newBreadOrder = new Bread(breadQuantity);
+      int breadTotal = newBreadOrder.GetTotalBread(breadQuantity);
       Console.WriteLine("How many pastries would you like?");
       string pastryResponse = Console.ReadLine();
       int pastryQuantity = int.Parse(pastryResponse);
       Pastry newPastryOrder = new Pastry(pastryQuantity);
+      int pastryTotal = newPastryOrder.GetTotalPastry(pastryQuantity);
+      Console.WriteLine("Your total is: " + (breadTotal + pastryTotal));
+
     }
   }
 }
