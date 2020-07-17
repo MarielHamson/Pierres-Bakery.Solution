@@ -11,6 +11,7 @@ _This console app was designed to showcase C# using a retail bakery shop as an e
 ## Specifications
 
 | Spec | Input | Output |
+
 | Create Bread and Pastry classes with quantity property| quantity selected for Bread and Pastry | Bread and Pastry objects instantiated with quantity |
 | Calculate total cost of order based on prices and quantity chosen | 6 loaves of Bread, 6 Pastry | $20 + $10 = $30 total cost |
 | Allow revision of order, both pastries and bread quantity | 6 loaves changed to 2 loaves, 6 Pastry changed to 1 | $10 + $2 = $12 total| 
