@@ -6,21 +6,16 @@ namespace PierresBakery.Models
   public class Bread
   {
     public int Price { get; }
+    public int Quantity { get; }
 
-    public Bread(string bread, int price)
+    public Bread(int price, int quantity)
     {
       Price = price;
-      myOrder.Add(this);
+      Quantity = quantity;
     }
-    private static Dictionary<string, int> myOrder = new Dictionary<string, int>()
-    {
 
-    };
 
-    public static Dictionary<string, int> TrackOrder()
-    {
-      return myOrder;
-    }
+
 
   }
 }
