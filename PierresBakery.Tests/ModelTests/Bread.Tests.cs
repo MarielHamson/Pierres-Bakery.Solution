@@ -24,5 +24,13 @@ namespace PierresBakery.Tests
       int result = newBread.Price;
       Assert.AreEqual(price, result);
     }
+
+    [TestMethod]
+    public void TrackOrder_ReturnsEmptyDictionary_Entries()
+    {
+      Dictionary<string, int> myOrder = new Dictionary<string, int>() { };
+      Dictionary<string, int> result = Bread.TrackOrder();
+      CollectionAssert.AreEqual(newDict, result);
+    }
   }
 }

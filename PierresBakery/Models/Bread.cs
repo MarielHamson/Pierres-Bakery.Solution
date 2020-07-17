@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace PierresBakery.Models
 {
   public class Bread
@@ -8,5 +11,15 @@ namespace PierresBakery.Models
     {
       Price = price;
     }
+    private static Dictionary<string, int> myOrder = new Dictionary<string, int>()
+    {
+
+    };
+
+    public static Dictionary<string, int> TrackOrder()
+    {
+      return myOrder;
+    }
+
   }
 }
