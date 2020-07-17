@@ -5,20 +5,29 @@ namespace PierresBakery.Models
 {
   public class Bread
   {
-    public int Price { get; }
-    public int Quantity { get; }
+    // public int Price { get; }
+    public int BreadQuantity { get; }
 
-    public Bread(int price, int quantity)
+    public Bread(int breadQuantity)
     {
-      Price = price;
-      Quantity = quantity;
+      // Price = price;
+      BreadQuantity = breadQuantity;
     }
 
-    public int GetTotalBread()
+    public int GetTotalBread(int breadQuantity)
     {
-      int Total = Price * Quantity;
-      int TotalQuantityFree = Quantity / 3;
-      int TotalBreadCost = (Total - TotalQuantityFree) * Price;
+      int TotalBreadCost = 0;
+      for (int i = 0; i > breadQuantity; i++)
+      {
+        if (i % 3 == 0)
+        {
+          TotalBreadCost += 0;
+        }
+        else
+        {
+          TotalBreadCost += 5;
+        }
+      }
       return TotalBreadCost;
     }
   }
