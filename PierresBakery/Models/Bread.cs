@@ -13,5 +13,10 @@ namespace PierresBakery.Models
       Price = price;
       Quantity = quantity;
     }
+
+    public int GetTotal()
+    {
+      return Price * Quantity;
+    }
   }
 }
