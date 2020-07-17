@@ -35,5 +35,15 @@ namespace PierresBakery.Tests
       int result = newBreadOrder.Quantity;
       Assert.AreEqual(quantity, result);
     }
+
+    [TestMethod]
+    public void SumBreadOrder_ReturnsTotalBreadOrder_Int()
+    {
+      int price = 5;
+      int quantity = 5;
+      Bread newBreadOrder = new Bread(price, quantity);
+      int result = newBreadOrder.Quantity * newBreadOrder.Price;
+      Assert.AreEqual((price * quantity), result);
+    }
   }
 }

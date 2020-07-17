@@ -11,10 +11,9 @@ _This console app was designed to showcase C# using a retail bakery shop as an e
 ## Specifications
 
 | Spec | Input | Output |
-| Create Bread and Pastry classes with price property| N/A (Program start) | Bread = $5, Pastry = $2 |
-| Accept input for amount of each to purchase | 2, 4 | 2 Bread, 4 Pastry|
-| Calculate sale price based on amount. Bread is buy 2 get 1 free. Pastry is 3 for $5. | 2 Bread, 3 Pastry | Bread is buy 2 get 1 free. Pastry is 3 for $5 |
-| Calculate total cost of order based on sale prices and quantity chosen | 6 loaves of Bread, 6 Pastry | $15 + $7 = \$22 total cost
+| Create Bread and Pastry classes with price and quantity property| N/A (Program start) | 1 Bread = $5, 1 Pastry = $2 |
+| Calculate total cost of order based on prices and quantity chosen | 6 loaves of Bread, 6 Pastry | $15 + $7 = \$22 total cost
+| Calculate discount price based on amount. Bread is buy 2 get 1 free. Pastry is 3 for $5. | 2 Bread, 3 Pastry | Bread is buy 2 get 1 free. Pastry is 3 for $5 |
 
 ## Setup/Installation Requirements
 
