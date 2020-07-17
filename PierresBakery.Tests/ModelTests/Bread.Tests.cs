@@ -1,5 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresBakery.Models;
+using System;
+using System.Collections.Generic;
 
 namespace PierresBakery.Tests
 {
@@ -8,11 +10,10 @@ namespace PierresBakery.Tests
   {
 
     [TestMethod]
-    public void NameOfMethod_DescriptionOfTest_ExpectedResult()
+    public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
-      //Arrange
-      //Act
-      //Assert.AreEqual(ExpectedResult, Code_To_Test);
+      Bread newBread = new Bread();
+      Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
   }
 }
