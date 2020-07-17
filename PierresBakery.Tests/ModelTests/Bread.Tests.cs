@@ -43,7 +43,7 @@ namespace PierresBakery.Tests
       int quantity = 5;
       Bread newBreadOrder = new Bread(price, quantity);
       int total = newBreadOrder.GetTotalBread();
-      int result = (price * quantity) - (quantity / 3) * price;
+      int result = ((price * quantity) - (quantity / 3)) * price;
       Assert.AreEqual(total, result);
     }
   }
