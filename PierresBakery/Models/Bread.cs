@@ -7,9 +7,10 @@ namespace PierresBakery.Models
   {
     public int Price { get; }
 
-    public Bread(int price)
+    public Bread(string bread, int price)
     {
       Price = price;
+      myOrder.Add(this);
     }
     private static Dictionary<string, int> myOrder = new Dictionary<string, int>()
     {

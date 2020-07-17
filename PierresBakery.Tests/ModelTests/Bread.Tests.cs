@@ -12,16 +12,16 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
-      Bread newBread = new Bread(5);
-      Assert.AreEqual(typeof(Bread), newBread.GetType());
+      Bread newBreadOrder = new Bread(5);
+      Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
     }
 
     [TestMethod]
     public void GetPrice_ReturnsPrice_Int()
     {
       int price = 5;
-      Bread newBread = new Bread(price);
-      int result = newBread.Price;
+      Bread newBreadOrder = new Bread(price);
+      int result = newBreadOrder.Price;
       Assert.AreEqual(price, result);
     }
 
@@ -30,7 +30,17 @@ namespace PierresBakery.Tests
     {
       Dictionary<string, int> myOrder = new Dictionary<string, int>() { };
       Dictionary<string, int> result = Bread.TrackOrder();
-      CollectionAssert.AreEqual(newDict, result);
+      CollectionAssert.AreEqual(myOrder, result);
+    }
+    [TestMethod]
+    public void TrackOrder_ReturnsAmtOfBread_myOrder()
+    {
+      string type = "bread";
+      int amount = 1;
+      Bread newBreadOrder = new Bread(type, amount);
+      Dictionary<string, int> myOrder = new Dictionary<string, int>() { type, amount };
+      Dictionary<string, int> result = myOrder.TrackOrder();
+      CollectionAssert.AreEqual(myOrder, result);
     }
   }
 }
