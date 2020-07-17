@@ -12,7 +12,8 @@ _This console app was designed to showcase C# using a retail bakery shop as an e
 
 | Spec | Input | Output |
 | Create Bread and Pastry classes with quantity property| quantity selected for Bread and Pastry | Bread and Pastry objects instantiated with quantity |
-| Calculate total cost of order based on prices and quantity chosen | 6 loaves of Bread, 6 Pastry | $20 + $10 = \$30 total cost
+| Calculate total cost of order based on prices and quantity chosen | 6 loaves of Bread, 6 Pastry | $20 + $10 = $30 total cost |
+| Allow revision of order, both pastries and bread quantity | 6 loaves changed to 2 loaves, 6 Pastry changed to 1 | $10 + $2 = $12 total| 
 
 ## Setup/Installation Requirements
 
@@ -24,17 +25,16 @@ Software Requirements
 Acquire The Repo:
 
 1. Click the 'Clone or Download' Button
-2. Alternately, Clone via Bash/GitBash: `git clone {repo name.git}`
+2. Alternately, Clone via Bash/GitBash: `git clone https://github.com/MarielHamson/Pierres-Bakery.Solution.git`
 
-Editting the Code Base:
+Editing the Code Base:
 
 1. Open the project in your code editor; with Bash, this is done by navigating to the project directory, then `code .`
 2. If you wish to run testing, you'll need the testing packages: navigate into the .Tests folder, and run `dotnet restore`
 
 Running the program:
 
-1. To run the program, you'll need to compile the code: `dotnet build`. This will create a compiled application in the bin/ folder.
-2. Alternately, you can run the program directly with `dotnet run`.
+1. To run the program, you'll need to compile the code and run it with : `dotnet build`. This will create a compiled application in the bin/ folder and run the program in your code editor's Terminal.
 
 ## Known Bugs
 
