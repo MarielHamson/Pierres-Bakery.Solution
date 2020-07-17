@@ -14,18 +14,18 @@ namespace PierresBakery.Models
       PastryQuantity = pastryQuantity;
     }
 
-    public int GetTotalPastry(int PastryQuantity)
+    public int GetTotalPastry(int pastryQuantity)
     {
       int TotalPastryCost = 0;
-      for (int i = 0; i > PastryQuantity; i++)
+      for (int i = 1; i <= pastryQuantity; i++)
       {
         if (i % 3 == 0)
         {
-          TotalPastryCost += 0;
+          TotalPastryCost += 1;
         }
         else
         {
-          TotalPastryCost += 5;
+          TotalPastryCost += 2;
         }
       }
       return TotalPastryCost;

@@ -12,38 +12,36 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
-      Bread newBreadOrder = new Bread(5, 5);
+      Bread newBreadOrder = new Bread(5);
       Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
     }
 
-    [TestMethod]
-    public void GetPrice_ReturnsPrice_Int()
-    {
-      int quantity = 5;
-      int price = 5;
-      Bread newBreadOrder = new Bread(price, quantity);
-      int result = newBreadOrder.Price;
-      Assert.AreEqual(price, result);
-    }
+    // [TestMethod]
+    // public void GetPrice_ReturnsPrice_Int()
+    // {
+    //   int quantity = 5;
+    //   int price = 5;
+    //   Bread newBreadOrder = new Bread(price, quantity);
+    //   int result = newBreadOrder.Price;
+    //   Assert.AreEqual(price, result);}
 
     [TestMethod]
     public void GetQuantity_ReturnsQuantity_Int()
     {
-      int price = 5;
-      int quantity = 5;
-      Bread newBreadOrder = new Bread(price, quantity);
-      int result = newBreadOrder.Quantity;
-      Assert.AreEqual(quantity, result);
+      // int price = 5;
+      int breadQuantity = 5;
+      Bread newBreadOrder = new Bread(breadQuantity);
+      int result = newBreadOrder.BreadQuantity;
+      Assert.AreEqual(breadQuantity, result);
     }
 
     [TestMethod]
     public void GetTotalBread_GetTotalBreadWithDiscount_Int()
     {
-      int price = 5;
-      int quantity = 5;
-      Bread newBreadOrder = new Bread(price, quantity);
-      int total = newBreadOrder.GetTotalBread();
-      int result = ((price * quantity) - (quantity / 3)) * price;
+      int breadQuantity = 5;
+      Bread newBreadOrder = new Bread(breadQuantity);
+      int total = newBreadOrder.GetTotalBread(breadQuantity);
+      int result = 20;
       Assert.AreEqual(total, result);
     }
   }

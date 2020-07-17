@@ -17,7 +17,7 @@ namespace PierresBakery.Models
     public int GetTotalBread(int breadQuantity)
     {
       int TotalBreadCost = 0;
-      for (int i = 0; i > breadQuantity; i++)
+      for (int i = 1; i <= breadQuantity; i++)
       {
         if (i % 3 == 0)
         {
